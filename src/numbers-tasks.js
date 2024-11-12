@@ -462,8 +462,9 @@ function getIntegerOnString(/* str, base */) {
  * 3.5      => false
  * 2 ** 53  => false
  */
-function isSafeInteger(/* number */) {
-  throw new Error('Not implemented');
+function isSafeInteger(number) {
+  const whether = Number.isSafeInteger(number);
+  return whether;
 }
 
 /**
@@ -476,8 +477,9 @@ function isSafeInteger(/* number */) {
  * 5.9  => 5
  * -5.1 => -6
  */
-function roundToSmallestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToSmallestInteger(number) {
+  const smallest = Math.floor(number);
+  return smallest;
 }
 
 /**
@@ -490,8 +492,9 @@ function roundToSmallestInteger(/* number */) {
  * 5.1  => 6
  * -5.9 => -5
  */
-function roundToLargestInteger(/* number */) {
-  throw new Error('Not implemented');
+function roundToLargestInteger(number) {
+  const round = Math.ceil(number);
+  return round;
 }
 
 /**
