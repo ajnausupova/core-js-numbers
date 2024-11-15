@@ -415,8 +415,9 @@ function isNumber(/* number */) {
  * 5.1  => false
  * '5'  => false
  */
-function isInteger(/* number */) {
-  throw new Error('Not implemented');
+function isInteger(number) {
+  const indicating = Number.isInteger(number);
+  return indicating;
 }
 
 /**
@@ -429,8 +430,9 @@ function isInteger(/* number */) {
  * '4.567abcdefgh' => 4.567
  * 'abcdefgh'      => NaN
  */
-function getFloatOnString(/* str */) {
-  throw new Error('Not implemented');
+function getFloatOnString(str) {
+  const floating = Number.parseFloat(str);
+  return floating;
 }
 
 /**
